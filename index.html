@@ -1,0 +1,74 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <title>
+      Google Visualization API Sample
+    </title>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load('visualization', '1', {packages: ['corechart']});
+    </script>
+    <script type="text/javascript">
+      function drawVisualization() {
+        var data = google.visualization.arrayToDataTable([
+          ['1', 320, 300, 240,210],
+          ['2', 300, 270, 140,120],
+          ['3', 190, 170, 120,100],
+          ['4', 170, 140, 50,30],
+          ['5', 10, 40, 80, 80],
+          ['6', 60, 70, 150,150],
+          ['7', 120, 140, 240, 240],
+          ['8', 190, 220, 320, 220]
+          // Treat first row as data as well.
+        ], true);
+
+        var options = {
+          legend:'None'
+        };
+
+        var chart = new google.visualization.CandlestickChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
+
+
+      }
+
+
+      //exemplo 2
+      function drawVisualization1() {
+        var data = google.visualization.arrayToDataTable([
+          ['1', 10, 40, 150,150],
+          ['2', 120, 140, 240, 240],
+          ['3', 190, 220, 320, 220],
+           ['4', 250, 290, 340, 340],
+          ['5', 320, 300, 240,210],
+          ['6', 300, 270, 140,120],
+          ['7', 190, 170, 120,100],
+          ['8', 170, 140, 50,30]
+          // Treat first row as data as well.
+        ], true);
+
+
+        var options = {
+          legend:'None'
+        };
+
+        var chart = new google.visualization.CandlestickChart(document.getElementById('chart_div1'));
+        chart.draw(data, options);
+
+
+      }
+
+
+      google.setOnLoadCallback(drawVisualization);
+      google.setOnLoadCallback(drawVisualization1);
+    </script>
+    </script>
+  </head>
+  <body>
+    <div id="chart_div" style="width: 900px; height: 500px;"></div>
+
+    <Strong> Reversão</Strong>
+    <div id="chart_div1" style="width: 900px; height: 500px;"></div>
+
+  </body>
+</html>
