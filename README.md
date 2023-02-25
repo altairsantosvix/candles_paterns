@@ -1,2 +1,2 @@
-A littler example of how to generate candles sticks
+This hmtl code show how to generate candles sticks
 
